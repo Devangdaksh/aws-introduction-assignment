@@ -16,9 +16,16 @@ Stacks: The actual group of live resources that AWS builds for you when it reads
 Change Sets: A "preview" button that shows you exactly what changes CloudFormation will make to your live stack before you hit execute, preventing accidental mistakes.  
 ## Q5.Explain the concept of load balancing in the context of AWS services.
 ### Ans.In AWS, load balancing is handled by Elastic Load Balancing (ELB). It acts like a digital traffic cop sitting in front of your servers.  When thousands of users try to access your website at the same time, the load balancer evenly splits up the incoming traffic and sends it to different servers so that no single server crashes from being overloaded.
+
 ## Q6.How does AWS Lambda facilitate serverless computing?
-### Ans.
+### Ans.Serverless computing doesn't mean servers don't exist; it just means you don't have to manage, update, or worry about them. AWS handles all the hardware backend.  AWS Lambda facilitates this through:
+Triggers (Event-Driven): Your code sits entirely asleep and costs $\$0$ until an event wakes it up (like a user uploading a photo to your app).  Instant Execution: Lambda instantly spins up an environment, runs your code (e.g., resizes the uploaded photo), and then disappears.  
+Millisecond Billing: You are only billed for the exact milliseconds your code is actively running. If your code takes $200$ milliseconds to run, you only pay for $200$ milliseconds.  
+
 ## Q7.Explain the concept of AWS Auto Scaling and its significance in cloud computing.
-### Ans.
+### Ans.AWS Auto Scaling is like an automatic thermostat for your cloud power. It monitors your applications and automatically adds or removes virtual computers based on real-time demand.
+No Crashes: If your school registration app experiences a massive rush at 9:00 AM, Auto Scaling automatically launches extra servers to handle the load so the site doesn't crash.
+Saves Money: At 2:00 AM when everyone is asleep, it shuts down those extra servers automatically so you aren't paying for idle computers.
+
 ## Q8.What is the purpose of Amazon RDS in AWS?
-### Ans.
+### Ans.Amazon RDS (Relational Database Service) is a managed service that sets up and runs databases (like MySQL or PostgreSQL) for you.In a traditional setup, a student or developer has to manually install database software, manage security updates, and remember to make backups. Amazon RDS automates all of these boring administrative tasks with a few clicks, letting you focus entirely on writing your app's code.
